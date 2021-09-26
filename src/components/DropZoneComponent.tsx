@@ -10,7 +10,7 @@ const DropZoneComponent: FunctionComponent<{ setFile: Dispatch<any> }> = ({ setF
 		[],
 	)
 
-	const { getRootProps, getInputProps, isDragAccept, isDragReject } = useDropzone({ onDrop, multiple: false, accept: "image/jpeg,image/png,image/jpg,audio/mpeg" });
+	const { getRootProps, getInputProps, isDragAccept, isDragReject } = useDropzone({ onDrop, multiple: false, accept: "image/jpeg,image/png,image/jpg,audio/mpeg,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
 
 	return (
 		<div className="w-full p-4">

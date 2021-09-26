@@ -10,7 +10,7 @@ const DropZoneComponent: FunctionComponent<{ setFile: Dispatch<any> }> = ({ setF
 		[],
 	)
 
-	const { getRootProps, getInputProps, isDragAccept, isDragReject } = useDropzone({ onDrop, multiple: false, accept: "image/jpeg,image/png,image/jpg,audio/mpeg,application/pdf,application/msword, application/docx, application/doc, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/zip, application/x-zip, application/x-zip-compressed" });
+	const { getRootProps, getInputProps, isDragAccept, isDragReject } = useDropzone({ onDrop, multiple: false, accept: "image/*, audio/mpeg, application/*" });
 
 	return (
 		<div className="w-full p-4">
@@ -25,7 +25,7 @@ const DropZoneComponent: FunctionComponent<{ setFile: Dispatch<any> }> = ({ setF
 					<img src="/images/folder.png" alt="folder" className="w-16 h-16" />
 
 					{
-						isDragReject ? <p>Sorry, this app only supports image, pdf, document, and mp3 </p> :
+						isDragReject ? <p>Sorry, this app only supports image, pdf, document, zip and mp3 </p> :
 							<>
 								<p>Drag & Drop Files Here</p>
 								<p className="mt-2 text-base text-gray-300">Only image, document, mp3 files supported</p>

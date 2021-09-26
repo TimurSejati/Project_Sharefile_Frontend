@@ -12,7 +12,7 @@ const EmailForm: FunctionComponent<{ id: string }> = ({ id }) => {
 		try {
 			const { data } = await axios({
 				method: "POST",
-				url: `${process.env.API_BASE_ENDPOINT}api/files/email`,
+				url: `api/files/email`,
 				data: {
 					id, emailFrom, emailTo
 				}
